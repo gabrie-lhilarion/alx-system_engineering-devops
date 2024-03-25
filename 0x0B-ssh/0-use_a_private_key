@@ -3,7 +3,6 @@
 # Define variables for server hostname or IP address, username, and private key file
 HOST="515230-web-01"
 USER="ubuntu"
-KEY="~/.ssh/school"
+KEY=$(~/.ssh/school)
 
-# Use SSH with single-character flags to connect to the server
 ssh -i "$KEY" "$USER"@"$HOST"
