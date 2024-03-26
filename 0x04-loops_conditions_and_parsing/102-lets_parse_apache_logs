@@ -1,0 +1,15 @@
+#!/bin/bash
+# Path to the log file
+
+logfile="access.log"
+
+# Check if the log file exists
+if [ -e "$logfile" ]; then
+    # Print header
+    echo "IP HTTP_CODE"
+    
+    # Extract IP and HTTP code using awk
+    awk '{print $1, $9}' "$logfile"
+else
+    echo "Log file not found: $logfile"
+fi
