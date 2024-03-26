@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Path to the file
+
+file="/etc/passwd"
+
+# Check if the file exists
+if [ -e "$file" ]; then
+    # Read the file line by line
+    while IFS=: read -r username _ userid _ homedir _; do
+        # Print the desired information
+        echo "Username: $username"
+        echo "User ID: $userid"
+        echo "Home directory: $homedir"
+        echo
+    done < "$file"
+else
+    echo "File not found: $file"
+fi
