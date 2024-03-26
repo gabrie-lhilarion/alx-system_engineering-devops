@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Using a for loop to iterate over files in the current directory
+
+for file in *; do
+    # Check if the file is not hidden and is a regular file
+    if [ ! -h "$file" ] && [ ! -d "$file" ] && [ ! -f "$file" ] && [ ! -s "$file" ]; then
+        # Extract the part of the name after the first dash
+        part_after_dash=$(echo "$file" | cut -d '-' -f 2-)
+        # Display the extracted part
+        echo "$part_after_dash"
+    fi
+done
