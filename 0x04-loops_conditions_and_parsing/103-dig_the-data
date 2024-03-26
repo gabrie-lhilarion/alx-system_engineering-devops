@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Path to the log file
+
+logfile="access.log"
+
+# Check if the log file exists
+if [ -e "$logfile" ]; then
+    # Use awk to count occurrences and group by IP and HTTP code, then sort by occurrence number in descending order
+    awk '{count[$1" "$9]++} END {for (i in count) print count[i], i}' "$logfile" | sort -nr
+else
+    echo "Log file not found: $logfile"
+fi
