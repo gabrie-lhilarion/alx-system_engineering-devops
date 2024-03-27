@@ -19,7 +19,7 @@ server {
     server_name _;
 
     location /redirect_me {
-        return 301 https://gabrielhilarion.tech/new-page;
+        return 301 https://gabrielhilarion.tech;
     }
 }
 EOF
