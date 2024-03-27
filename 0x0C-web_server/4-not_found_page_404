@@ -15,7 +15,7 @@ fi
 # Create a custom 404 error page
 echo "Ceci n'est pas une page" > /usr/share/nginx/html/404.html
 
-# Configure Nginx to use the custom 404 page
+# Configure Nginx to use the custom 404 page for other URLs
 cat << EOF > /etc/nginx/sites-available/default
 server {
     listen 80 default_server;
@@ -24,10 +24,18 @@ server {
     root /usr/share/nginx/html;
     index index.html index.htm;
 
-    server_name 515230-web-01;
+    server_name _;
 
     location / {
         try_files \$uri \$uri/ =404;
+    }
+
+    location = /xyz {
+        return 404;
+    }
+
+    location ~ ^/xyzfoo {
+        try_files /404.html =404;
     }
 
     error_page 404 /404.html;
