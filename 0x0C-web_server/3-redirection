@@ -31,4 +31,4 @@ ln -sf /etc/nginx/sites-available/redirect_me /etc/nginx/sites-enabled/
 nginx -t
 
 # Reload Nginx to apply changes
-systemctl reload nginx
+service nginx reload
