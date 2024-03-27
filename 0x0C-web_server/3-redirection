@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Install Nginx if not already installed
 
+# Check if the script is run as root
 if [ "$(id -u)" -ne 0 ]; then
     echo "This script must be run as root" 1>&2
     exit 1
@@ -16,10 +17,9 @@ fi
 cat << EOF > /etc/nginx/sites-available/redirect_me
 server {
     listen 80;
-    server_name _;
 
     location /redirect_me {
-        return 301 https://gabrielhilarion.tech;
+        return 301 https://example.com/new-page;
     }
 }
 EOF
