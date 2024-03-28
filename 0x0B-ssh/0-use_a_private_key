@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Define variables for server hostname or IP address, username, and private key file
-HOST="100.26.247.170
+HOST="100.26.247.170"
 USER="ubuntu"
 KEY="$HOME/.ssh/school" 
 
