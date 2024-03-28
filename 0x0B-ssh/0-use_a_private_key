@@ -3,7 +3,7 @@
 # Define variables for server hostname or IP address, username, and private key file
 private_key=~/.ssh/school
 user=ubuntu
-server=your_server_ip
+server=100.26.247.170
 
 # SSH connection command
 ssh -i "$private_key" "$user"@"$server"
