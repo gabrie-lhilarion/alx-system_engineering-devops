@@ -5,4 +5,4 @@ HOST="100.26.247.170"
 USER="ubuntu"
 KEY="$HOME/.ssh/school" 
 
-ssh -i "$KEY" "$USER"@"$HOST"
+ssh "$USER"@"$HOST"
