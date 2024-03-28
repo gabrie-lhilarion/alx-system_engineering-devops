@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Create SSH client configuration file
+
+cat << EOF > ~/.ssh/config
+Host 515230-web-01
+    HostName 100.26.247.170
+    User ubuntu
+    IdentityFile ~/.ssh/school
+    PasswordAuthentication no
+EOF
