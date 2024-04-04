@@ -1,11 +1,11 @@
 #!/bin/bash
-# Install HAProxy if not already installed
 
+# Install HAProxy if not already installed
 sudo apt-get update
 sudo apt-get install -y haproxy
 
 # Generate SSL certificate for the subdomain www
-sudo certbot certonly --standalone -d www.example.com
+sudo certbot certonly --standalone -d www.gabrielhilarion.tech
 
 # Create HAProxy configuration file
 cat <<EOF | sudo tee /etc/haproxy/haproxy.cfg
@@ -33,7 +33,7 @@ frontend http_front
     redirect scheme https code 301 if !{ ssl_fc }
 
 frontend https_front
-    bind *:443 ssl crt /etc/letsencrypt/live/www.example.com/fullchain.pem
+    bind *:443 ssl crt /etc/letsencrypt/live/www.gabrielhilarion.tech/fullchain.pem
     default_backend http_back
 
 backend http_back
