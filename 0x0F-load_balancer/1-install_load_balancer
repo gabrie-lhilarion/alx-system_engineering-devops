@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# Install load ballancer
+
+balancer="\
+frontend haproxy_balancer
+    bind *:80
+    mode http
+    default_backend webservers
+    
+backend webservers
+    balance roundrobin
+    server 515230-web-01 100.27.10.232 check
+    server 515230-web-02 54.144.152.144 check
+"
+
+apt-get -y update
+apt-get -y upgrade
+
+apt-get -y install software-properties-common
+add-apt-repository -y ppa:vbernat/haproxy-2.5
+apt-get -y update
+
+apt-get -y install haproxy
+cp -a /etc/haproxy/haproxy.cfg{,.orig}
+echo "$balancer" >> /etc/haproxy/haproxy.cfg
+service haproxy restart
