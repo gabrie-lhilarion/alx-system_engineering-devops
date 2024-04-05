@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This script prints information about domains and subdomains.
+# HAProxy configuration file, which defines how HAProxy should handle requests
 
 global
     log     /dev/log local0
