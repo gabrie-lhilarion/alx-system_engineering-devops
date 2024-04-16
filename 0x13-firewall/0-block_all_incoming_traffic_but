@@ -20,3 +20,5 @@ sudo ufw reload
 
 # Display the UFW status to confirm the changes
 sudo ufw status verbose
+
+echo -e "Process Completed.\n"
