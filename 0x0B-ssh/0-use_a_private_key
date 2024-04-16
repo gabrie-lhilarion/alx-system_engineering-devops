@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # Define variables for server hostname or IP address, username, and private key file
 private_key=~/.ssh/school
 user=ubuntu
