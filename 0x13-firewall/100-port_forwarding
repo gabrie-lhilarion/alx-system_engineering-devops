@@ -15,10 +15,14 @@ sudo ufw allow 80/tcp
 # Allow HTTPS (port 443)
 sudo ufw allow 443/tcp
 
+# Allow port 8080/TCP for redirection
+sudo ufw allow 8080/tcp
+
+# Redirect port 8080/TCP to port 80/TCP
+sudo iptables -t nat -A PREROUTING -p tcp --dport 8080 -j REDIRECT --to-port 80
+
 # Reload UFW to apply the changes
 sudo ufw reload
 
 # Display the UFW status to confirm the changes
 sudo ufw status verbose
-
-echo -e "Process Completed.\n"
