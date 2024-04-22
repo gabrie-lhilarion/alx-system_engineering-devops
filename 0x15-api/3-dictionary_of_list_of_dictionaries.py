@@ -71,8 +71,6 @@ def export_all_todo_json():
     with open(filename, 'w') as jsonfile:
         json.dump(json_data, jsonfile, indent=4)
 
-    print(f"JSON file '{filename}' has been generated successfully.")
-
 
 if __name__ == "__main__":
     export_all_todo_json()
