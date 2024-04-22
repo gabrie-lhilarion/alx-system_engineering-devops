@@ -4,7 +4,6 @@ This script generaites CSV file
 '''
 
 import requests
-import csv
 import sys
 
 
