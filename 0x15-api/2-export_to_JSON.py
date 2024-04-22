@@ -20,8 +20,8 @@ Usage:
 python script.py <employee_id>
 """
 
-import requests
 import json
+import requests
 import sys
 
 
