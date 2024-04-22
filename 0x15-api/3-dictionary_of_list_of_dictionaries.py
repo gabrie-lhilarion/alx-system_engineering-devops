@@ -25,8 +25,8 @@ Usage:
 python script.py
 """
 
-import requests
 import json
+import requests
 
 
 def export_all_todo_json():
