@@ -1,28 +1,29 @@
 #!/usr/bin/python3
 """
-Queries the Reddit API recursively, parses the title of all hot 
+Queries the Reddit API recursively, parses the title of all hot
 articles, and prints a sorted count of given keywords.
 """
 
 import requests
 
+
 def count_words(subreddit, word_list, hot_list=[], after=None):
     """
-    Queries the Reddit API recursively, parses the title of all 
+    Queries the Reddit API recursively, parses the title of all
     hot articles, and prints a sorted count of given keywords.
 
     Args:
         subreddit (str): The name of the subreddit.
         word_list (list): A list of keywords to count.
         hot_list (list): A list to store the titles of hot articles.
-        after (str): A token for pagination, indicating the starting 
+        after (str): A token for pagination, indicating the starting
         point for the next page of results.
 
     Returns:
         None
     """
     url = f"https://www.reddit.com/r/{subreddit}/hot.json?limit=100"
-    headers = {"User-Agent": "Mozilla/5.0"}  
+    headers = {"User-Agent": "Mozilla/5.0"}
     params = {"after": after} if after else {}
 
     response = requests.get(url, headers=headers, params=params)
@@ -48,11 +49,13 @@ def count_words(subreddit, word_list, hot_list=[], after=None):
                         else:
                             word_count[word.lower()] += 1
 
-            sorted_words = sorted(word_count.items(), key=lambda x: (-x[1], x[0]))
+            sorted_words = sorted(word_count.items(),
+                                  key=lambda x: (-x[1], x[0]))
             for word, count in sorted_words:
                 print(f"{word}: {count}")
     else:
         print("None")
+
 
 if __name__ == "__main__":
     subreddit = input("Enter subreddit name: ")
