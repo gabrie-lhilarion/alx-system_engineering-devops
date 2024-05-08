@@ -1,14 +1,14 @@
 import requests
 
 # Set your Datadog API and application keys
-api_key = 'YOUR_API_KEY'
-app_key = 'YOUR_APPLICATION_KEY'
+api_key = '730e39d6b64e9bea0fe3cf5a61123438'
+app_key = 'ba5818222fe929bea9a78455b613d62d5921df16'
 
 # Datadog API endpoint for listing hosts
 url = 'https://api.datadoghq.com/api/v1/hosts'
 
 # Set the hostname to search for
-hostname_to_search = 'XX-web-01'
+hostname_to_search = '515230-web-01'
 
 # Set headers with authentication information
 headers = {
