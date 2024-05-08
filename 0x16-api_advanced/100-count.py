@@ -61,4 +61,3 @@ if __name__ == "__main__":
     subreddit = input("Enter subreddit name: ")
     word_list = input("Enter keywords separated by spaces: ").split()
     count_words(subreddit, word_list)
-
