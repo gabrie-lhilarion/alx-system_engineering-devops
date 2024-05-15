@@ -6,3 +6,5 @@ server=100.27.10.232
 
 # SSH connection command
 ssh -i "$private_key" "$user"@"$server"
+
+# ssh -i ~/.ssh/school ubuntu@00.27.10.232
