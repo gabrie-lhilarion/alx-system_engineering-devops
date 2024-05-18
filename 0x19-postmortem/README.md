@@ -19,7 +19,7 @@
 .
 
 ## Misleading Investigation Paths:
-** Initially, the team suspected database connectivity issues or server configuration problems, leading to efforts in those areas before identifying the cause. **
+*Initially, the team suspected database connectivity issues or server configuration problems, leading to efforts in those areas before identifying the cause.*
 
 
 
