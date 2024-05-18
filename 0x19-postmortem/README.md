@@ -1,7 +1,7 @@
 # Incident Postmortem: Unexpected Page Loading Issue
 
 ## Issue Summary:
-
+![alt text](./images/bad-code.jpg)
 **Users of Bevijj supermarket are not able to access the website, though the webpage opened, it was just a plank white page.**
 
 *Duration: Start Time: 7:50 PM, Dec 12, 2016, GMT+1; End Time: 12:50 PM, Dec 14, 2016*
@@ -26,6 +26,7 @@
 
 
 ## Resolution:
+![alt text](./images/bevijj-good-code.jpg)
 *The immediate resolution involved adding `ab_start()` at the beginning of the affected PHP files to start output buffering and prevent any unintentional output.*
 
 ## Corrective and Preventative Measures:
