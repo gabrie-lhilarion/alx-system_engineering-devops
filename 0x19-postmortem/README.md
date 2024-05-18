@@ -6,7 +6,7 @@
 
 *Duration: Start Time: 7:50 PM, Dec 12, 2016, GMT+1; End Time: 12:50 PM, Dec 14, 2016*
 
-== Impact: Users experienced an unexpected issue where the home page failed to load. Approximately 100 percent of users were affected. ==.
+==Impact: Users experienced an unexpected issue where the home page failed to load. Approximately 100 percent of users were affected.==.
 
 ##Root Cause:
 ### *The root cause of the issue was identified by me as a "headers already sent" error due to whitespaces and newline characters between the <?php opening tag and the session_start() function. *
@@ -19,7 +19,7 @@
 .
 
 ## Misleading Investigation Paths:
-*Initially, the team suspected database connectivity issues or server configuration problems, leading to efforts in those areas before identifying the cause.*
+*Initially, the I suspected database connectivity issues or server configuration problems, leading to efforts in those areas before identifying the cause.*
 
 
 
