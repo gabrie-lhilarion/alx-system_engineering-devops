@@ -10,7 +10,7 @@
 *Users experienced an unexpected issue where the home page failed to load. Approximately 100 percent of users were affected.*
 
 ## Root Cause:
-*The root cause of the issue was identified by me as a "headers already sent" error due to whitespaces and newline characters between the <?php opening tag and the session_start() function. *
+*The root cause of the issue was identified by me as a "headers already sent" error due to whitespaces and newline characters between the <?php opening tag and the session_start() function.*
 
 ## Timeline:
 - 7:50 PM, Dec 12, 2016: Users reported unexpected page loading issues.
